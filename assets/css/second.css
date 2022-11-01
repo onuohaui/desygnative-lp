@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.my-grid{
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    min-height: 100vh; /*Temporary*/
+}
+
+.my-grid .left{
+    background-color: #F4F4F0;
+}
+
+.my-grid .right{
+    background-color: #000000;
+    color: white;
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 62px;
+    height: 132px;
+    background-color: #F4F4F0;
+    color: #81817F;
+    font-size: 25px;
+    font-weight: 300;
+    font-family: Garet;
+}

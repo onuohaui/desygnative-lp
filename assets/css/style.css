@@ -1,0 +1,553 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-heading: #2E2E2E;
+  --logo-background: #FFF;
+  --background-color: #F4F4F0;
+  --color-body: #F4F4F0;
+  --color-button-default: #60FFBD;
+  --color-button-hover: #FED807;
+  --font-base: "Work Sans";
+  --border: 2px solid #000;
+  --padding-right-footer: 90px;
+  --left-padding: 90px;
+  /*I'm going to use this everywhere so if you update it will align everything at once.*/
+
+}
+
+body {
+  background-color: var(--color-body);
+  font-family: var(--font-base), sans-serif;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  border-bottom: var(--border-bottom);
+}
+
+/* mega-gum-logo-wrap Start  */
+
+.mega-gum-logo-wrap {
+  padding: 1.5rem 2vw;
+  display: grid;
+  place-items: center;
+  background: var(--logo-background);
+  width: 100%;
+  margin: auto;
+  grid-column: 1/4;
+}
+
+.mega-gum-logo {
+  width: 100%;
+}
+
+/* mega-gum-logo-wrap End */
+
+.tagline {
+  grid-column: 1/2;
+  background-color: #fff;
+  font-size: 2.5rem;
+  font-weight: 300;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-left: var(--left-padding);
+  display: flex;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  border-top: var(--border);
+  border-right: var(--border);
+}
+
+.social-links {
+  grid-column: 2/3;
+  background-color: #fff;
+  display: flex;
+  gap: 50px;
+  /*Gap between two icons*/
+  justify-content: center;
+  align-items: center;
+  border-top: var(--border);
+}
+
+.social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  width: 63px;
+  height: 63px;
+  color: #000;
+  border: 2px solid black;
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+.img {
+  grid-row: 2/4;
+  grid-column: 3/4;
+  width: 100%;
+  padding: 0;
+  content: '';
+  background-image: url(/assets/images/side.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: #FED807;
+  border-top: var(--border);
+  border-left: var(--border);
+}
+
+
+.main-content {
+  grid-column: 1/3;
+  min-height: 300px;
+  padding-left: var(--left-padding);
+  margin-bottom: 35px;
+  border-top: var(--border);
+}
+
+.main-content h2 {
+  font-weight: 850;
+  font-size: 70px;
+  line-height: 95px;
+  padding-top: 60px;
+  margin-left: 0;
+  color: var(--color-heading);
+}
+
+.main-content p {
+  font-size: 20px;
+  margin-top: 10px;
+  font-weight: 300;
+
+}
+
+.main-content .lp-dis1 {
+  margin-top: 18px;
+  margin-bottom: 39px;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.lp-dis {
+  font-weight: 500;
+}
+
+/* SCROLLING TEXT START */
+
+.scrolling-text {
+  grid-column: 1/4;
+  font-style: normal;
+  display: flex;
+  overflow: hidden;
+  height: 170px;
+  border-top: var(--border);
+  align-items: center;
+}
+
+
+.m-scroll {
+  white-space: nowrap;
+  animation: scrollText 30s infinite linear;
+  margin: 0;
+  font-size: 0;
+  display: inline-block;
+  border: none;
+}
+
+.m-scroll span {
+  font-size: 80px;
+  display: inline-block;
+  font-weight: 300;
+  font-family: "Work Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #000;
+}
+
+@keyframes scrollText {
+  from {
+    transform: translateX(0%);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* SCROLLING TEXT ENDS */
+
+
+footer {
+  grid-column: 1/4;
+  padding: 54px;
+  padding-left: var(--left-padding);
+  height: 132px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: var(--padding-right-footer);
+  border-top: var(--border);
+}
+
+footer .right {
+  display: flex;
+  align-items: center;
+  gap: 163px;
+}
+
+footer .right ul {
+  list-style: none;
+  display: flex;
+  gap: 39px;
+}
+
+footer .right .lang {
+  display: flex;
+  align-items: center;
+}
+
+footer .footer-end {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  /* distace betwwen icons*/
+}
+
+/* Footer End */
+
+
+
+i.las {
+  font-size: 2rem;
+  cursor: pointer;
+  display: inherit;
+}
+
+.sub-form {
+  width: 100%;
+  display: absolute;
+  justify-content: left;
+  align-items: center;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.sub-form .agreement {
+  font-size: 15px;
+  color: var(--color-heading);
+  padding-top: 10px;
+  padding-bottom: 50px;
+  margin-top: 30px;
+}
+
+.sub-form .agreement .tos {
+  font-weight: 500;
+}
+
+form {
+  padding-left: 50px;
+}
+
+input {
+  border: solid 2px #000;
+  background-color: #ffffff;
+  padding: 15px;
+  font-size: 13px;
+  border-radius: 0.438rem;
+  width: 300px;
+}
+
+.subscribe-form input {
+  font-size: 18px;
+  text-align: left;
+  padding-right: 15px;
+}
+
+.mybtn {
+  border: solid 2px #000;
+  background-color: #60FFBD;
+  padding: 15px;
+  font-size: 18px;
+  color: rgb(0, 0, 0);
+  border-radius: 0.438rem;
+  margin-top: -3px;
+  width: 200px;
+  height: 60px;
+  margin-left: 10px;
+  cursor: pointer !important;
+  position: relative;
+}
+
+.mybtn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(100% - 2px);
+  height: calc(100% - 2px);
+  background-color: #FED807;
+  z-index: -1;
+  border-radius: 0.438rem;
+  border: solid 2px #000;
+  transition: all 0.3s ease-in-out;
+}
+
+.mybtn:hover::before {
+  top: 7px;
+  left: 7px;
+}
+
+/* BUTTON END */
+
+
+.mega-gum-logo-wrap,
+.tagline,
+.main-content,
+.scrolling-text {
+  border-left: none !important;
+}
+
+.sub-form,
+.sub-field,
+.subscribe-form {
+  border: none !important;
+}
+
+.grid-two {
+  grid-column: 1/4;
+  display: grid;
+  grid-template-columns: 673px 1fr;
+  padding: 0 !important;
+  font-size: 20px;
+  border-top: var(--border);
+}
+
+.grid-two .first {
+  border-right: var(--border-bottom);
+  padding: 80px;
+  padding-left: var(--left-padding);
+  /* height: 517px; */
+  background-color: #FDCF96;
+  border-right: var(--border);
+}
+
+.grid-two .second {
+  background-color: #60FFBD;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 62px;
+}
+
+.grid-two h2 {
+  font-size: 35px;
+  margin-bottom: 15px;
+}
+
+.grid-two p {
+  padding-bottom: 20px;
+  line-height: 1.5em;
+}
+
+.image-two {
+  width: 392px;
+  margin: auto;
+}
+
+.mybtn {
+  margin-left: 0;
+  max-width: 300px;
+}
+
+.btn-2 {
+  padding-left: 48px;
+}
+
+.subscribe-form {
+  padding: 0;
+  justify-content: left;
+}
+
+.subscribe-form input {
+  width: 312px;
+  height: 60px;
+}
+
+.agreement {
+  padding: 0;
+}
+
+
+.btn-wrap {
+  position: relative;
+  width: max-content;
+  height: 60px;
+}
+
+.btn-2 {
+  border: solid 2px #000;
+  background-color: #60FFBD;
+  padding: 15px;
+  font-size: 18px;
+  color: rgb(0, 0, 0);
+  border-radius: 0.438rem;
+  cursor: pointer !important;
+  font-weight: 850;
+  margin-left: 0 !important;
+  position: absolute;
+  width: 300px;
+  height: 60px;
+  z-index: 99;
+}
+
+.btn-bg {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(100% - 2px);
+  height: calc(100% - 2px);
+  background-color: #FED807;
+  border-radius: 0.438rem;
+  border: solid 2px #000;
+  transition: all 0.3s ease-in-out;
+  width: 300px;
+  height: 60px;
+}
+
+.btn-2:hover~.btn-bg {
+  top: 7px;
+  left: 7px;
+}
+
+@media screen and (max-width: 425px) {
+
+  .mega-gum-logo-wrap {
+    margin: 0;
+    padding: 0;
+  }
+
+  .social-links {
+    display: none;
+  }
+
+  .tagline {
+    display: none;
+  }
+
+  .main-content {
+    grid-row: 2/3;
+    grid-column: 1/4;
+    padding: 0.5rem;
+  }
+
+  .main-content h2 {
+    font-size: 50px;
+    padding-top: 10px;
+    text-align: center;
+    line-height: normal;
+    /*set value of this according to you*/
+  }
+
+  .main-content p {
+    font-size: 18px;
+    text-align: center;
+    line-height: 1.5rem;
+    margin-left: 45px;
+  }
+
+  .mega-gum-logo {
+    width: 50%;
+  }
+
+  .mega-gum-logo-wrap {
+    padding: 1.5rem 2vw; /*first value define padding of top and bottom and second value define left and right I want to push it to the right a little*/
+    /*then increase padding in left*/
+    padding-left: 2rem; /*this value is distance between left side of screen and logo*/
+    display: flex;
+    align-items: center;
+  }
+
+  .img {
+    grid-row: 3/4;
+    grid-column: 1/4;
+    height: 400px;
+    width: 100%;
+  }
+
+  .main-content .lp-dis1 {
+   margin-left: 45px;
+   margin-right: 45px;
+  }
+  
+  .lp-dis {
+    font-weight: 500;
+  }
+
+  .sub-form{
+    display: inline-block;
+    align-content: center;
+  }
+  /*What next?*/
+  .subscribe-form{
+    padding: 0 1rem 0 1rem; /*top right bottom left is order of value*/
+  }
+
+  .subscribe-form input {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .mybtn{
+    width: 100%; /**here you set width to 100% but at line 363 max width is 300px so it can only go to 300px. So to over rule that we have to define again max width in media screen also.*/
+    margin-top: 0.5rem;
+    max-width: 100%;
+    /* margin: 0 1rem; */
+  }
+/*Now it should work. It worked. The buttons now spread out evenly*/
+
+.sub-form .agreement {
+  align-items: center;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 8px;
+  padding-bottom: 0;
+}
+.grid-two .first{
+  grid-column: 1/3;
+  width: 100vw;
+  padding: 1.5rem 1rem 5rem 1rem;
+}
+
+.grid-two h2 {
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.grid-two p{
+  text-align: center;
+}
+
+.btn-wrap {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.grid-two .second{
+  grid-column: 1/3;
+  width: 100vw;
+}
+.image-two{
+  width: 100%;
+}
+
+}
+
+/* I will do grid-two later*/
